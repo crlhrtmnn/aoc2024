@@ -2,12 +2,12 @@ import * as fs from "fs";
 
 const filePath = "puzzle.txt";
 const file = fs.readFileSync(filePath, "utf-8");
-const fileArray = file.split("\n");
+const lines = file.split("\n");
 
 const list1: number[] = [];
 const list2: number[] = [];
 
-fileArray.forEach((element) => {
+lines.forEach((element) => {
   const [a, b] = element.split("   ");
   list1.push(Number(a));
   list2.push(Number(b));
